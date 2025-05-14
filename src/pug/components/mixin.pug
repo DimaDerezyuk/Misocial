@@ -1,0 +1,95 @@
+-
+    let mainMenu = [
+        ['Home', '#'],
+        ['Why MISOCIAL', '#'],
+        ['Features', '#'],
+        ['Articles', '#'],
+        ['Pricing', '#'],
+    ]
+
+mixin menu(mainMenu, colorTheme="light")
+    .navigation.flex-between.items-center.gap(class=colorTheme)
+        .logo 
+            a.items-center.malitoplogo(href="index.html")
+                img(src="img/mainlogo.svg", alt="логотип сайту")
+                span.logotext MISOCIAL
+        nav.nav.flex-between.items-center
+            ul.toptext(class=colorTheme) 
+                for item in mainMenu 
+                    li.smalltextlogo 
+                        a.getstart(href=item[1]) #{item[0]} 
+            a.gav.cta-nav(href="") get started
+
+-
+    let cardInfo = {
+        satelite: {
+            img: "img/mars.svg",
+            href: "#",
+            personal: "personal",
+            currency: "$",
+            price: "0",
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btn: "select plan",
+            hrefBtn: "#",
+        },
+        mars: {
+            img: "img/satelite.svg",
+            href: "#",
+            personal: "personal",
+            currency: "$",
+            price: "29",
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btn: "select plan",
+            hrefBtn: "#",
+        },
+        rocket: {
+            img: "img/kosmo.svg",
+            href: "#",
+            personal: "personal",
+            currency: "$",
+            price: "49",
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btn: "select plan",
+            hrefBtn: "#",
+        }
+    }
+
+mixin card(oneCard)
+    figure 
+        figcaption 
+            img(src=oneCard.img, alt=oneCard.alt)
+            p.personal #{oneCard.personal}
+            p.price
+                sup
+                    span.currency #{oneCard.currency}
+                b #{oneCard.price} 
+                sub
+                    if isMonth 
+                        | /month 
+                    else 
+                        | /year
+            ul.description
+                for item in oneCard.description
+                    li #{item}
+            a.cta-nav(href=oneCard.hrefBtn) #{oneCard.btn}
