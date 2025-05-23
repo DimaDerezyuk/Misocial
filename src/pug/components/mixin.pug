@@ -4,7 +4,7 @@
         ['Why MISOCIAL', '#'],
         ['Features', '#'],
         ['Articles', '#'],
-        ['Pricing', ''],
+        ['Pricing', '#'],
     ]
 
 mixin menu(mainMenu, colorTheme="light")
@@ -88,7 +88,7 @@ mixin card(oneCard)
                     if isMonth 
                         | /month 
                     else 
-                        | /year
+                        | /month
             ul.description
                 for item in oneCard.description
                     li #{item}
