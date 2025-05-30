@@ -6,7 +6,7 @@
 
 html
   scroll-behavior: smooth
-  font-size: 0.9px
+  font-size: 1px
 
 body
   font-family: 'Maven Pro'
@@ -80,18 +80,19 @@ a
   transition: all 0.5s ease
   fill: #6a6a77
 
-// .getstart:hover
- content: ""
- top: 25rem
- left: -5rem
- widht: 60rem
- height: 2rem  
- transform: slace(1)
- border: none
- border-top: 2rem solid #f22%
-.mainmenufooter:hover
-  fill: #756edc
-  transition: 0.5s ease 
+.getstart.light:hover
+  content: ""
+  top: 25rem
+  left: -5rem
+  width: 60rem
+  height: 2rem
+  transform: scale(1)
+  border: none
+  border-top: 2rem solid #fff
+
+a.getstart.dark:hover
+ color: #756edc
+ transition: all 1s ease
 
 .svginsta
   cursor: pointer
@@ -129,7 +130,7 @@ a
 .getstart
   transition: all 0.5s ease
 
-.getstart:hover
+.getstart.dark:hover
   color: #756edc
   transition: all 1s ease
 
@@ -288,15 +289,6 @@ main
   font-family: "Maven Pro"
   text-align: center
 
-.getstart:hover
- content: ""
- top: 12.5rem
- left: -5rem
- height: 2rem  
- transform: scale(1)
- border: none
- border-top: 2rem solid #fff
-
 .personal
   font-size: 14rem
   letter-spacing: 1rem
@@ -317,7 +309,7 @@ figure:last-child img
 
 .price b
   font-size: 60rem
-  letter-spacing: -2rem
+  letter-spacing: -7rem
   line-height: 72rem
   color: #4f4f6f
   font-weight: 500
@@ -333,12 +325,13 @@ figure:last-child img
   font-weight: 500
   font-family: "Maven Pro"
   text-align: center
+  
+.price b ~ sub
+  position: relative
 
 span.currency
  position: absolute
- left: 47%
- top: 139%
-
+ top: 153%
 .fourth
   padding-top: 178rem
   padding-bottom: 24rem

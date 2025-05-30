@@ -17,7 +17,7 @@ mixin menu(mainMenu, colorTheme="light")
             ul.toptext(class=colorTheme) 
                 for item in mainMenu 
                     li.smalltextlogo 
-                        a.getstart(href=item[1]) #{item[0]} 
+                        a.getstart(class=colorTheme)(href=item[1]) #{item[0]} 
             a.gav.cta-nav(href="") get started
 
 -
