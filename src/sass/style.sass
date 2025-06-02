@@ -80,19 +80,44 @@ a
   transition: all 0.5s ease
   fill: #6a6a77
 
-.getstart.light:hover
-  content: ""
-  top: 25rem
-  left: -5rem
-  width: 60rem
-  height: 2rem
-  transform: scale(1)
-  border: none
-  border-top: 2rem solid #fff
+a.getstart.light
+  position: relative
+  z-index: 1
 
-a.getstart.dark:hover
- color: #756edc
- transition: all 1s ease
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    bottom: -25%
+    height: 2rem
+    transform: scale(0)
+    transition: 0.5s ease
+    border: none
+    background-color: #fff
+    z-index: -1
+
+  &:hover:before
+    transform: scale(1)
+
+a.getstart.dark
+  position: relative
+  z-index: 1
+
+  &:before
+    content: ""
+    position: absolute
+    bottom: -25%    
+    width: 100%
+    height: 2rem
+    transform: scale(0)
+    transition: 0.5s ease
+    border: none
+    background-color: #000
+    z-index: -1
+
+  &:hover:before
+    transform: scale(1)
+
 
 .svginsta
   cursor: pointer
@@ -129,10 +154,6 @@ a.getstart.dark:hover
 
 .getstart
   transition: all 0.5s ease
-
-.getstart.dark:hover
-  color: #756edc
-  transition: all 1s ease
 
 .button
   display: block
@@ -271,6 +292,7 @@ main
   justify-content: center
 
 .maincards > figure
+  flex-wrap: nowrap 
   padding: 90rem 
   border-radius: 30rem
   background-color: #ffffff
@@ -318,6 +340,7 @@ figure:last-child img
 
 .price b ~ sub,
 .currency
+  position: relative
   font-size: 16rem
   letter-spacing: -1rem
   line-height: 51rem
@@ -329,9 +352,10 @@ figure:last-child img
 .price b ~ sub
   position: relative
 
-span.currency
+b ~ span.currency
  position: absolute
  top: 153%
+
 .fourth
   padding-top: 178rem
   padding-bottom: 24rem
