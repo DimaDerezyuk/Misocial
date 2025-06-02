@@ -338,23 +338,29 @@ figure:last-child img
   font-family: "Maven Pro"
   text-align: center
 
-.price b ~ sub,
-.currency
+.price
   position: relative
-  font-size: 16rem
-  letter-spacing: -1rem
-  line-height: 51rem
+  font-size: 48rem
+  line-height: 1rem
   color: #4f4f6f
   font-weight: 500
   font-family: "Maven Pro"
   text-align: center
-  
-.price b ~ sub
-  position: relative
 
-b ~ span.currency
- position: absolute
- top: 153%
+  .currency
+    position: absolute
+    left: 89rem 
+    top: 20rem
+    font-size: 15rem   
+    line-height: 1
+
+  b
+    font-size: inherit
+
+  sub
+    font-size: 16rem
+    vertical-align: baseline
+
 
 .fourth
   padding-top: 178rem
@@ -423,14 +429,3 @@ footer div:last-child p
 .footer > div > a:last-child
   height: 15rem
   width: 15rem   
-
-// .getstart:hover
-//  content: ""
-//  position: absolute
-//  top: 25rem
-//  left: -5rem
-//  widht: 60rem
-//  height: 2rem  
-//  transform: slace(1)
-//  border: none
-//  border-top: 2rem solid #fff
