@@ -343,24 +343,27 @@ figure:last-child img
 
 .price
   position: relative
-  display: inline-block
-  font-size: 28rem
+  font-size: 48rem
   line-height: 1rem
   color: #4f4f6f
   font-weight: 500
   font-family: "Maven Pro"
   text-align: center
 
-  .currency
+  span ~ .currency
     position: absolute
-    font-size: 16rem
-    top: 15rem
-    left: -10rem
+    left: 80rem 
+    top: 20rem
+    font-size: 1rem   
+    line-height: 1
+    
 
-  sub
+  sub ~ b
+    font-size: inherit
+
+  b ~ sub
     font-size: 16rem
     vertical-align: baseline
-
 
 
 .fourth
